@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+}
+
+/* Utility to hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Footnote Tooltip Style */
+.footnote-ref {
+  position: relative;
+  display: inline-block;
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+/* Preview Mode Specifics */
+.preview-a4 {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  padding: 25mm;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: white;
+}
+.dark .preview-a4 {
+  background: #1e293b;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  color: #e2e8f0;
+}
+.preview-mobile {
+  width: 375px;
+  margin: 20px auto;
+  border: 8px solid #333;
+  border-radius: 24px;
+  padding: 20px;
+  background: white;
+  min-height: 667px;
+}
+.dark .preview-mobile {
+  background: #1e293b;
+  border-color: #0f172a;
+  color: #e2e8f0;
+}
